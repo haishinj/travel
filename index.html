@@ -990,3 +990,742 @@
     .faq-container {
       max-width: 90rem;
       margin
+.faq-item {
+      margin-bottom: var(--spacing-sm);
+      border-radius: var(--radius-sm);
+      background-color: var(--color-light);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      padding: var(--spacing-md);
+      font-weight: 600;
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition-default);
+    }
+    
+    .faq-question:hover {
+      color: var(--color-primary);
+    }
+    
+    .faq-question i {
+      font-size: 1.6rem;
+      transition: var(--transition-default);
+    }
+    
+    .faq-item.active .faq-question {
+      color: var(--color-primary);
+    }
+    
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: var(--transition-default);
+      padding: 0 var(--spacing-md);
+    }
+    
+    .faq-item.active .faq-answer {
+      max-height: 50rem;
+      padding: 0 var(--spacing-md) var(--spacing-md);
+    }
+    
+    /* ========== FOOTER ========== */
+    .footer {
+      background-color: var(--color-secondary-dark);
+      color: var(--color-light);
+      padding: var(--spacing-lg) 0;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: var(--spacing-lg);
+    }
+    
+    .footer-brand .logo {
+      margin-bottom: var(--spacing-md);
+      color: var(--color-light);
+    }
+    
+    .footer-text {
+      opacity: 0.7;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: var(--spacing-sm);
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--color-light);
+      font-size: 1.8rem;
+      transition: var(--transition-default);
+    }
+    
+    .social-link:hover {
+      background-color: var(--color-primary);
+      color: var(--color-secondary-dark);
+      transform: translateY(-5px);
+    }
+    
+    .footer-heading {
+      font-family: var(--font-primary);
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-md);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .footer-heading::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 3rem;
+      height: 2px;
+      background-color: var(--color-primary);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: var(--transition-default);
+    }
+    
+    .footer-links a:hover {
+      color: var(--color-primary);
+      transform: translateX(5px);
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+      text-align: center;
+      opacity: 0.7;
+      font-size: 1.4rem;
+    }
+    
+    /* ========== FLOATING BUTTON ========== */
+    .floating-btn {
+      position: fixed;
+      bottom: 3rem;
+      right: 3rem;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      background-color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-secondary-dark);
+      font-size: 2.4rem;
+      box-shadow: var(--shadow-md);
+      cursor: pointer;
+      z-index: 99;
+      transition: var(--transition-default);
+    }
+    
+    .floating-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      background-color: var(--color-primary-dark);
+      color: var(--color-light);
+    }
+    
+    /* ========== ANIMATIONS ========== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .fade-in.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* ========== RESPONSIVE STYLES ========== */
+    @media (max-width: 1200px) {
+      html {
+        font-size: 58%;
+      }
+      
+      .plans-container {
+        gap: var(--spacing-sm);
+      }
+      
+      .footer-grid {
+        gap: var(--spacing-md);
+      }
+    }
+    
+    @media (max-width: 992px) {
+      html {
+        font-size: 56%;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .mobile-toggle {
+        display: block;
+      }
+      
+      .hero-title {
+        font-size: 6rem;
+      }
+      
+      .concept-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .concept-image {
+        height: 40rem;
+      }
+      
+      .plans-container {
+        grid-template-columns: 1fr;
+        max-width: 50rem;
+        margin: 0 auto;
+      }
+      
+      .plan-card.featured {
+        transform: scale(1);
+      }
+      
+      .plan-card.featured:hover {
+        transform: translateY(-10px);
+      }
+      
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .gallery-item.wide {
+        grid-column: span 1;
+      }
+      
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      html {
+        font-size: 54%;
+      }
+      
+      .section {
+        padding: var(--spacing-lg) 0;
+      }
+      
+      .hero-title {
+        font-size: 5rem;
+      }
+      
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 30rem;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+      }
+    }
+    
+    @media (max-width: 576px) {
+      html {
+        font-size: 52%;
+      }
+      
+      .hero-title {
+        font-size: 4.2rem;
+      }
+      
+      .btn-group {
+        flex-direction: column;
+      }
+      
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+      
+      .footer-text {
+        font-size: 1.6rem;
+      }
+    }
+    
+    /* ========== MOBILE MENU ========== */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 40rem;
+      height: 100vh;
+      background-color: var(--color-secondary-dark);
+      z-index: calc(var(--z-nav) - 1);
+      padding: 10rem var(--spacing-md) var(--spacing-md);
+      transition: right 0.4s ease;
+      overflow-y: auto;
+    }
+    
+    .mobile-menu.open {
+      right: 0;
+      box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .mobile-nav {
+      list-style: none;
+    }
+    
+    .mobile-nav-item {
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .mobile-nav-link {
+      display: block;
+      font-size: 2rem;
+      color: var(--color-light);
+      padding: var(--spacing-sm) 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition-default);
+    }
+    
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      color: var(--color-primary);
+    }
+    
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: calc(var(--z-nav) - 2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+    
+    .mobile-menu-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="logo">Bali<span>Luxe</span></a>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">ホーム</a></li>
+          <li><a href="#concept" class="nav-link">コンセプト</a></li>
+          <li><a href="#plans" class="nav-link">プラン</a></li>
+          <li><a href="#gallery" class="nav-link">ギャラリー</a></li>
+          <li><a href="#testimonials" class="nav-link">お客様の声</a></li>
+          <li><a href="#booking" class="nav-link">ご予約</a></li>
+          <li><a href="#faq" class="nav-link">よくある質問</a></li>
+        </ul>
+        <div class="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== MOBILE MENU ========== -->
+  <div class="mobile-menu">
+    <ul class="mobile-nav">
+      <li class="mobile-nav-item"><a href="#home" class="mobile-nav-link active">ホーム</a></li>
+      <li class="mobile-nav-item"><a href="#concept" class="mobile-nav-link">コンセプト</a></li>
+      <li class="mobile-nav-item"><a href="#plans" class="mobile-nav-link">プラン</a></li>
+      <li class="mobile-nav-item"><a href="#gallery" class="mobile-nav-link">ギャラリー</a></li>
+      <li class="mobile-nav-item"><a href="#testimonials" class="mobile-nav-link">お客様の声</a></li>
+      <li class="mobile-nav-item"><a href="#booking" class="mobile-nav-link">ご予約</a></li>
+      <li class="mobile-nav-item"><a href="#faq" class="mobile-nav-link">よくある質問</a></li>
+    </ul>
+  </div>
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h2 class="subtitle">バリ島カップルツアー</h2>
+        <h1 class="hero-title">Romance & Surprise<br><span class="text-highlight">特別な思い出をふたりに</span></h1>
+        <p class="hero-subtitle">インスタ映え確実の絶景スポットと、二人だけの特別な瞬間を<br>ラグジュアリーでありながらSDGsにも配慮した旅をご提案</p>
+        <div class="btn-group mt-md">
+          <a href="#plans" class="btn btn-primary">プランを見る</a>
+          <a href="#booking" class="btn btn-secondary">無料相談はこちら</a>
+        </div>
+      </div>
+    </div>
+    <a href="#concept" class="hero-scroll">
+      <span>スクロール</span>
+      <i class="fas fa-chevron-down mt-sm"></i>
+    </a>
+  </section>
+
+  <!-- ========== CONCEPT SECTION ========== -->
+  <section id="concept" class="section bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <h3 class="subtitle">私たちについて</h3>
+        <h2>Romance & Surprise</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="concept-grid">
+        <div class="concept-image fade-in">
+          <img src="/api/placeholder/800/1000" alt="バリ島のロマンティックな景色">
+        </div>
+        <div class="concept-content fade-in">
+          <h3 class="concept-title">思い出に残る瞬間を<br><span class="text-highlight">カタチにする</span></h3>
+          <p class="concept-text">バリ島の美しい景色を背景に、カップルの皆様に特別な思い出を作るお手伝いをいたします。サプライズプロポーズや記念日のお祝いなど、特別な瞬間を最高の形でプロデュースします。</p>
+          <p class="concept-text">少子化が進む現代社会において、カップルの絆を深め、人生の大切な節目を彩ることで、幸せな関係づくりをサポートすることが私たちの使命です。</p>
+          <div class="btn-group mt-md">
+            <a href="#plans" class="btn btn-primary">詳しく見る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PLANS SECTION ========== -->
+  <section id="plans" class="section bg-gray">
+    <div class="container">
+      <div class="section-header text-center">
+        <h3 class="subtitle">ツアープラン</h3>
+        <h2>あなたにぴったりの<span class="text-highlight">プラン</span></h2>
+        <p>ライフスタイルに合わせた3つのプランをご用意しています。<br>すべてのプランで特別なサプライズ体験が含まれています。</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="plans-container">
+        <!-- 短期プラン -->
+        <div class="plan-card fade-in">
+          <div class="plan-header">
+            <h3 class="plan-title">短期プラン</h3>
+            <p class="plan-subtitle">1日のショートトリップ</p>
+            <div class="plan-price">¥29,800<small>〜</small></div>
+          </div>
+          <div class="plan-body">
+            <ul class="plan-features">
+              <li>
+                <i class="fas fa-check"></i>
+                <span>有名ビーチでのプライベートディナー</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>インスタ映えスポット巡り (3ヶ所)</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>プロフェッショナルカメラマン (2時間)</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>専用車での送迎</span>
+              </li>
+            </ul>
+            <div class="plan-cta">
+              <a href="#booking" class="btn btn-outline">詳細を見る</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 中期プラン - 人気 -->
+        <div class="plan-card featured fade-in">
+          <div class="popular-tag">人気 No.1</div>
+          <div class="plan-header">
+            <h3 class="plan-title">中期プラン</h3>
+            <p class="plan-subtitle">2〜7日間の贅沢な時間</p>
+            <div class="plan-price">¥128,000<small>〜</small></div>
+          </div>
+          <div class="plan-body">
+            <ul class="plan-features">
+              <li>
+                <i class="fas fa-check"></i>
+                <span>5つ星ホテル宿泊 (プライベートプール付)</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>カップルスパトリートメント</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>ウブド&南部ビーチエリア観光</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>プロポーズ/記念日サプライズ演出</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>専属ガイドと専用車</span>
+              </li>
+            </ul>
+            <div class="plan-cta">
+              <a href="#booking" class="btn btn-primary">詳細を見る</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 長期プラン -->
+        <div class="plan-card fade-in">
+          <div class="plan-header">
+            <h3 class="plan-title">長期プラン</h3>
+            <p class="plan-subtitle">1週間以上の極上体験</p>
+            <div class="plan-price">¥298,000<small>〜</small></div>
+          </div>
+          <div class="plan-body">
+            <ul class="plan-features">
+              <li>
+                <i class="fas fa-check"></i>
+                <span>最高級ヴィラ滞在</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>専属シェフによる特別ディナー</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>隠れ家ビーチでのピクニック</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>離島ツアー (ヌサペニダ島など)</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>ヘリコプターからのバリ島観光</span>
+              </li>
+            </ul>
+            <div class="plan-cta">
+              <a href="#booking" class="btn btn-outline">詳細を見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY SECTION ========== -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h3 class="subtitle">フォトギャラリー</h3>
+        <h2>フォトジェニックな<span class="text-highlight">体験</span></h2>
+        <p>インスタ映え間違いなしの絶景スポットと特別な瞬間の数々</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in">
+          <img src="/api/placeholder/600/600" alt="バリ島の絶景" class="gallery-image">
+          <div class="gallery-overlay">
+            <div>
+              <h4 class="gallery-title">天国の門</h4>
+              <p class="gallery-description">SNSで大人気のスポット</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item wide fade-in">
+          <img src="/api/placeholder/1200/600" alt="バリ島の絶景" class="gallery-image">
+          <div class="gallery-overlay">
+            <div>
+              <h4 class="gallery-title">ウブドのライステラス</h4>
+              <p class="gallery-description">神秘的な棚田の風景</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item tall fade-in">
+          <img src="/api/placeholder/600/1200" alt="バリ島の絶景" class="gallery-image">
+          <div class="gallery-overlay">
+            <div>
+              <h4 class="gallery-title">プライベートプール</h4>
+              <p class="gallery-description">二人だけの特別な時間</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="/api/placeholder/601/600" alt="バリ島の絶景" class="gallery-image">
+          <div class="gallery-overlay">
+            <div>
+              <h4 class="gallery-title">ロマンティックディナー</h4>
+              <p class="gallery-description">海辺での特別な夜</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="/api/placeholder/602/600" alt="バリ島の絶景" class="gallery-image">
+          <div class="gallery-overlay">
+            <div>
+              <h4 class="gallery-title">伝統舞踊鑑賞</h4>
+              <p class="gallery-description">バリの文化に触れる</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item wide fade-in">
+          <img src="/api/placeholder/1200/601" alt="バリ島の絶景" class="gallery-image">
+          <div class="gallery-overlay">
+            <div>
+              <h4 class="gallery-title">サンセットクルーズ</h4>
+              <p class="gallery-description">夕日を眺めながらの船旅</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-lg">
+        <a href="#" class="btn btn-outline">もっと見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS SECTION ========== -->
+  <section id="testimonials" class="section bg-gray">
+    <div class="container">
+      <div class="section-header text-center">
+        <h3 class="subtitle">お客様の声</h3>
+        <h2>幸せな<span class="text-highlight">思い出</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="testimonials-container">
+        <div class="testimonials-grid">
+          <div class="testimonial-card fade-in">
+            <div class="testimonial-content">
+              初めてのバリ旅行でしたが、全てが完璧でした。ホテルのプライベートプールからの夕日は一生の思い出です。インスタの投稿も過去最高の「いいね」がつきました！
+            </div>
+            <div class="testimonial-author">
+              <img src="/api/placeholder/100/100" alt="鈴木さん" class="testimonial-author-image">
+              <div class="testimonial-author-info">
+                <h4>鈴木さん(24)</h4>
+                <p>2025年1月利用</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card fade-in">
+            <div class="testimonial-content">
+              彼女へのプロポーズで利用しました。現地スタッフが花やキャンドルでホテルの部屋をデコレーションしてくれて、彼女も大喜び。プロポーズ大成功でした！
+            </div>
+            <div class="testimonial-author">
+              <img src="/api/placeholder/100/101" alt="田中さん" class="testimonial-author-image">
+              <div class="testimonial-author-info">
+                <h4>田中さん(26)</h4>
+                <p>2024年12月利用</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION ========== -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title fade-in">特別な時間を過ごそう</h2>
+      <p class="cta-text fade-in">今予約すると、カップルフォトツアーが無料。さらに、早期予約で最大20%オフ。</p>
+      <div class="btn-group flex-center">
+        <a href="#plans" class="btn btn-primary">プランを見る</a>
+        <a href="#booking" class="btn btn-secondary">お問い合わせ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BOOKING FORM ========== -->
+  <section id="booking" class="section">
+    <div class="container container-sm">
+      <div class="section-header text-center">
+        <h3 class="subtitle">ご予約</h3>
+        <h2>特別な旅の<span class="text-highlight">お手伝い</span></h2>
+        <p>ご希望や疑問点がございましたら、お気軽にお問い合わせください。<br>24時間以内にご返信いたします。</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="booking-form fade-in">
+        <form id="reservation-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name" class="form-label">お名前</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">メールアドレス</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="phone" class="form-label">電話番号</label>
+              <input type="tel" id="phone" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="date" class="form-label">ご希望の旅行日</label>
+              <input type="date" id="date" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="duration" class="form-label">滞在期間</label>
+              <select id="duration" class="form-control">
+                <option value="">選択してください</option>
+                <option value="1day">1日 (日帰り)</option>
+                <option value="short">2〜3日</option>
+                <option value="medium">4〜7日</option>
+                <option value="long">8日以上</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="persons" class="form-label">人数</label>
+              <input type="number" id="persons" class="form-control" min="2" value="2">
+            </div>
+            <div class="form-group full-width">
+              <label for="plan" class="form-label">ご希望のプラン</label>
+              <select id="plan" class="form-control">
+                <option value="">選択してください</option>
+                <option value="short">短期プラン</option>
+                <option value="medium">中期プラン</option>
+                <option value="long">長期プラン</option>
+                <option value="custom">カスタムプラン</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="message" class="form-label">その
