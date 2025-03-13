@@ -4,11 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BALI LUXE | ラグジュアリーなバリ島カップル体験</title>
+  <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <style>
+    /* LINEボタン用追加CSS */
+    .line-btn {
+      background-color: #00C300;
+      color: white !important;
+      font-size: 1.8rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1.5rem 3rem;
+      border-radius: 999px;
+      transition: 0.3s ease;
+    }
+
+    .line-btn i {
+      font-size: 2rem;
+    }
+
+    .line-btn:hover {
+      background-color: #00A000;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 予約フォーム部分のみ表示 -->
+  <section id="booking" class="section">
+    <div class="container">
+      <div class="booking-form fade-in">
+        <form id="reservation-form">
+          <div class="form-group full-width booking-submit">
+            <a href="https://lin.ee/1MZ97Hi" target="_blank" class="btn btn-primary line-btn">
+              <i class="fab fa-line"></i>公式LINEでお問い合わせ
+            </a>
+          </div>
+        </form>
+      </div>
+
+</body>
+</html>
     /* ========== BASIC RESET & VARIABLES ========== */
     :root {
       --color-primary: #D4B06A;
